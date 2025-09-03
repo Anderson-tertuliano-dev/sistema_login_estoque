@@ -92,6 +92,43 @@ def estoque():
 
     return render_template("estoque.html", produtos=produtos)
 
+@app.route("/excluir/<int:id>", methods=["POST"])
+def excluir(id):
+    conn = sqlite3.connect("usuarios.db")
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM produtos WHERE id = ?", (id,))
+    conn.commit()
+    conn.close()
+    return redirect(url_for("estoque"))
+
+
+@app.route("/editar/<int:id>", methods=["GET", "POST"])
+def editar(id):
+    conn = sqlite3.connect("usuarios.db")
+    cursor = conn.cursor()
+
+    if request.method == "POST":
+        produto = request.form.get("produto", "").strip()
+        codigo = request.form.get("codigo", "").strip()
+        quantidade = int(request.form.get("quantidade", 0))
+        preco = float(request.form.get("preco", 0.0))
+
+        cursor.execute("""
+            UPDATE produtos
+            SET produto = ?, codigo = ?, quantidade = ?, preco = ?
+            WHERE id = ?
+        """, (produto, codigo, quantidade, preco, id))
+        conn.commit()
+        conn.close()
+        return redirect(url_for("estoque"))
+
+    # Se for GET, busca dados do produto
+    cursor.execute("SELECT * FROM produtos WHERE id = ?", (id,))
+    produto = cursor.fetchone()
+    conn.close()
+
+    return render_template("editar.html", produto=produto)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

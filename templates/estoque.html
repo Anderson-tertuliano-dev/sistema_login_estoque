@@ -48,8 +48,12 @@
                         <td>{{ produto[3] }}</td> 
                         <td>R$ {{ "%.2f"|format(produto[4]) }}</td> 
                         <td>
-                            <button type="button" class="btn editar">✏️ Editar</button>
-                            <button type="button" class="btn excluir">🗑️ Excluir</button>
+                            <form method="GET" action="{{ url_for('editar', id=produto[0]) }}" style="display:inline;">
+                            <button type="submit" class="btn editar">✏️ Editar</button>
+                            </form>
+                            <form method="POST" action="{{ url_for('excluir', id=produto[0]) }}" style="display: inline;">
+                            <button type="submit" class="btn excluir">🗑️ Excluir</button>
+                            </form>
                         </td>
                     </tr>
                     {% endfor %}
