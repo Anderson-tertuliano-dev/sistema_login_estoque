@@ -17,7 +17,7 @@
     <main>
         <section class="acoes">
             <!-- Formulário para adicionar produto -->
-            <form method="POST" action="{{ url_for('estoque') }}" class="bnt">
+            <form method="POST" action="{{ url_for('estoque') }}" class="form_adicionar">
                 <input type="text" name="produto" placeholder="Nome do produto" required>
                 <input type="text" name="codigo" placeholder="Código" required>
                 <input type="number" name="quantidade" placeholder="Quantidade" required>
@@ -43,16 +43,17 @@
                     {% for produto in produtos %}
                     <tr>
                         <td>{{ produto[0] }}</td>
-                        <td>{{ produto[1] }}</td> 
-                        <td>{{ produto[2] }}</td> 
-                        <td>{{ produto[3] }}</td> 
-                        <td>R$ {{ "%.2f"|format(produto[4]) }}</td> 
+                        <td>{{ produto[1] }}</td>
+                        <td>{{ produto[2] }}</td>
+                        <td>{{ produto[3] }}</td>
+                        <td>R$ {{ "%.2f"|format(produto[4]) }}</td>
                         <td>
                             <form method="GET" action="{{ url_for('editar', id=produto[0]) }}" style="display:inline;">
-                            <button type="submit" class="btn editar">✏️ Editar</button>
+                                <button type="submit" class="btn editar">✏️ Editar</button>
                             </form>
-                            <form method="POST" action="{{ url_for('excluir', id=produto[0]) }}" style="display: inline;">
-                            <button type="submit" class="btn excluir">🗑️ Excluir</button>
+                            <form method="POST" action="{{ url_for('excluir', id=produto[0]) }}"
+                                style="display: inline;">
+                                <button type="submit" class="btn excluir">🗑️ Excluir</button>
                             </form>
                         </td>
                     </tr>
@@ -66,6 +67,9 @@
             </table>
         </section>
     </main>
+    <footer>
+        <a href="{{ url_for('login')}}">Voltar</a>
+    </footer>
 </body>
 
 </html>

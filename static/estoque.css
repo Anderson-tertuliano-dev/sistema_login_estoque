@@ -9,7 +9,7 @@
     
 }
 
-.bnt{
+.form_adicionar{
     display: flex;
     gap: 10px;
     align-items: center;
@@ -18,13 +18,13 @@
     
 }
 
-.bnt input{
+.form_adicionar input{
     flex: 1;
     min-width: 120px;
     padding: 8px 16px;
 }
 
-.bnt button{
+.form_adicionar button{
     padding: 8px 16px;
     
 }
