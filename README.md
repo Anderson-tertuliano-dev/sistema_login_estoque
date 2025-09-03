@@ -38,8 +38,9 @@ Foi desenvolvido para treinar **HTML e CSS**, e backend com Python/Flask e Banco
   - login.html
   - recuperar_senha.html
   - suporte.html
-  
+
 app.py
+
 criar_banco.py
 
 
