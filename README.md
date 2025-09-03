@@ -31,12 +31,14 @@ Foi desenvolvido para treinar **HTML e CSS**, e backend com Python/Flask e Banco
   - recover.css
   - reset.css
   - suporte.css
+
 /templates
   - cadastro.html
   - estoque.html
   - login.html
   - recuperar_senha.html
   - suporte.html
+  
 app.py
 criar_banco.py
 
