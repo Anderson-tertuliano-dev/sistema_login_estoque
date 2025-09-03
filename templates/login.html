@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/reset.css">
+  <link rel="stylesheet" href="../static/global.css">
+  <link rel="stylesheet" href="../static/login.css">
+</head>
+
+<body>
+  <header>
+  <h1>SISTEMA CADASTRO</h1>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <form method="POST" action="{{ url_for('login') }}" class="login-form">
+        <label for="email_usuario">Email ou usuário:</label>
+        <input id="email_usuario" name="email_usuario" type="text" placeholder="Digite seu email ou usuário" required>
+        <label for="senha">Senha:</label>
+        <input id="senha" name="senha" type="password" placeholder="Digite sua senha" required>
+        <input type="submit" class="btn" value="Entrar">
+        <a href="recuperar_senha.html" class="link">Esqueci minha senha</a>
+        <a href="/cadastro" class="link">Ainda não tem conta? Cadestre-se</a>
+      </form>
+    </div>
+  </main>
+
+  <div class="login-footer">
+    <footer>
+      <p>© 2025 Controle de Estoque</p>
+      <a href="suporte.html">FAQ</a>
+    </footer>
+  </div>
+</body>
+
+</html>

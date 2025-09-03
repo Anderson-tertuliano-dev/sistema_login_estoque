@@ -1,0 +1,29 @@
+/* ===== PÁGINA LOGIN ===== */
+form.login-form {
+    max-width: 350px;
+    margin: 60px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.link{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+label{
+   display: inline-block;
+   margin-top: 10px;
+
+    
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

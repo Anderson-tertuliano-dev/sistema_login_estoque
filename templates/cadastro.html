@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="../css/cadastro_estilo.css">
+    <link rel="stylesheet" href="../static/reset.css">
+    <link rel="stylesheet" href="../static/global.css">
+    <link rel="stylesheet" href="../static/cadastro.css">
 </head>
 
 <body>
@@ -14,19 +16,23 @@
     </header>
 
     <div class="texto_cadastro">
-        <p class="t1">Dados pessoais</p>
+
         <p class="t2">Inscrição Sistema de Controle de Estoque:</p>
-        <p class="t3">Comece informando seus dados pessoais para continuar</p>
+
     </div>
 
-    <form action="">
+    <form method="POST" action="{{ url_for('cadastro')}}">
         <div class="form-grid">
             <input id="nome_cliente" name="nome" type="text" placeholder="Nome completo*" required>
             <input id="email" name="email" type="email" placeholder="Email*" required>
             <input id="cpf" name="cpf" type="text" placeholder="CPF*" required>
             <input id="celular" name="celular" type="tel" placeholder="Telefone*" required>
+            <input id="senha" name="senha" type="password" placeholder="Digite sua senha*" required>
+            <input id="confirmar_senha" name="confirma_senha" type="password" placeholder="Confirme sua senha*"
+                required>
+
         </div>
-        <input type="submit" value="Salvar" class="btn-submit">
+        <input type="submit" value="Salvar" class="btn">
     </form>
 </body>
 

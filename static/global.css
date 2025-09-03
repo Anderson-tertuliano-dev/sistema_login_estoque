@@ -1,0 +1,54 @@
+/* ===== ESTILOS GLOBAIS ===== */
+header {
+    background: #4a6cf7;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Botões padrão */
+.btn {
+    display:inline-block ;
+    margin: 15px auto;
+    padding: 8px 16px;
+    background: #4a6cf7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+}
+
+.btn:hover {
+    background: #3651c9;
+}
+
+/* Inputs padrão */
+input {
+    margin-top: 5px;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0px 0px 6px rgba(74, 108, 247, 0.5);
+}
+
+a{
+    color: #4a6cf7;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}

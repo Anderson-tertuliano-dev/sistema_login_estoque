@@ -1,0 +1,113 @@
+/* ===== PÁGINA CONTROLE DE ESTOQUE ===== */
+
+.acoes{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+.bnt{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+
+    
+}
+
+.bnt input{
+    flex: 1;
+    min-width: 120px;
+    padding: 8px 16px;
+}
+
+.bnt button{
+    padding: 8px 16px;
+    
+}
+.tabela_estoque {
+
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+
+
+.tabela_estoque table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.tabela_estoque th,
+.tabela_estoque td {
+    border: 1px solid #ddd;
+    text-align: center;
+    
+}
+
+
+
+.tabela_estoque thead th {
+    background: #4a6cf7;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 10px;
+
+}
+
+
+.tabela_estoque tr{
+    padding: 10px;
+}
+
+
+.tabela_estoque tbody tr:hover {
+  background: #eef2ff;
+}
+
+
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+
+.btn.editar {
+    background: #f1c40f;
+    color: #000;
+}
+
+.btn.editar:hover {
+    background: #d4ac0d;
+}
+
+.btn.excluir {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn.excluir:hover {
+    background: #c0392b;
+    
+}
+
+.btn.adicionar {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.btn.adicionar:hover {
+    background: #27ae60;
+}
+

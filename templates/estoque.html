@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="../static/reset.css">
+    <link rel="stylesheet" href="../static/global.css">
+    <link rel="stylesheet" href="../static/estoque.css">
+</head>
+
+<body>
+    <header>
+        <h1>Controle de Estoque</h1>
+    </header>
+    <main>
+        <section class="acoes">
+            <!-- Formulário para adicionar produto -->
+            <form method="POST" action="{{ url_for('estoque') }}" class="bnt">
+                <input type="text" name="produto" placeholder="Nome do produto" required>
+                <input type="text" name="codigo" placeholder="Código" required>
+                <input type="number" name="quantidade" placeholder="Quantidade" required>
+                <input type="number" step="0.01" name="preco" placeholder="Preço" required>
+                <button type="submit" class="btn adicionar">➕ Adicionar</button>
+            </form>
+        </section>
+
+        <section class="tabela_estoque">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nome Produto</th>
+                        <th>Código</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if produtos %}
+                    {% for produto in produtos %}
+                    <tr>
+                        <td>{{ produto[0] }}</td>
+                        <td>{{ produto[1] }}</td> 
+                        <td>{{ produto[2] }}</td> 
+                        <td>{{ produto[3] }}</td> 
+                        <td>R$ {{ "%.2f"|format(produto[4]) }}</td> 
+                        <td>
+                            <button type="button" class="btn editar">✏️ Editar</button>
+                            <button type="button" class="btn excluir">🗑️ Excluir</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td colspan="5" style="text-align:center;">Nenhum produto cadastrado</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
