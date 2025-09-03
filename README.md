@@ -24,19 +24,19 @@ Foi desenvolvido para treinar **HTML e CSS**, e backend com Python/Flask e Banco
 
 ## 📂 Estrutura do Projeto
 /static
-   ├─ cadastro.css
-   ├─ estoque.css
-   ├─ global.css
-   ├─ login.css
-   ├─ recover.css
-   ├─ reset.css
-   └─ suporte.css
+   cadastro.css
+   estoque.css
+   global.css
+   login.css
+   recover.css
+   reset.css
+   suporte.css
 /templates
-   ├─ cadastro.html
-   ├─ estoque.html
-   ├─ login.html
-   ├─ recuperar_senha.html
-   └─ suporte.html
+   cadastro.html
+   estoque.html
+   login.html
+   recuperar_senha.html
+   suporte.html
 app.py
 criar_banco.py
 
