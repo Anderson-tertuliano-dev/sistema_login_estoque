@@ -127,7 +127,14 @@ def editar(id):
     produto = cursor.fetchone()
     conn.close()
 
-    return render_template("editar.html", produto=produto)
+    return render_template("/editar.html", produto=produto)
+
+@app.route("/recuperar_senha", methods=["GET","POST"])
+def recuperar_senha():
+    if request.method == "POST":
+        email = request.form.get("email")
+        return "Se o email existir no sistema, enviaremos instruções."
+    return render_template("recuperar_senha.html")
 
 
 if __name__ == "__main__":
